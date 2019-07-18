@@ -1,0 +1,115 @@
+/* ------------------------------------------------------------------ */
+/* a. General Styles
+/* ------------------------------------------------------------------ */
+
+/* Navigation
+--------------------------------------------------------------------- */
+#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+	 margin: 0;
+	 padding: 0;
+	 border: none;
+	 outline: none;
+}
+
+/* nav-wrap */
+#nav-wrap {
+   font: 12px 'opensans-bold', sans-serif;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;
+   z-index: 100;
+   position: relative;
+   left: 0;
+   top: 0;
+   background-color: #6B0014FF
+}
+
+ul#nav {
+   min-height: 48px;
+   width: auto;
+
+   /* center align the menu */
+   text-align: center;
+}
+ul#nav li {
+   position: relative;
+   list-style: none;
+   height: 48px;
+   display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+
+/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+
+   display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+	text-decoration: none;
+   text-align: left;
+   color: #fff;
+
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+ul#nav li a:active { color: #F06000 }
+
+/* Game
+--------------------------------------------------------------------- */
+
+#game {
+   height: 800px;
+   overflow: hidden;
+   min-height: 500px;
+   width: 100%;
+   background: #161415;
+   color: #FFFFFFFF;
+   text-align: center;
+   overflow: hidden;
+}
+
+#game h1 {
+   font: 40px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+}
+
+#game p {
+	font: 18px 'Lucida Sans Typewriter', sans-serif;
+
+}
+
+#game h2 {
+	font: 48px cursive, sans-serif;
+	padding-top: 100px;
+}
+
+#game h4 {
+	float: right;
+	font: 24px 'opensans-bold', sans-serif;
+	padding-right: 40px;
+}
+
+#game h3 {
+	float: left;
+	font: 24px 'opensans-bold', sans-serif;
+	padding-left: 40px;
+}
+
+#game input[type=text] {
+  padding: 12px 18px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font: 14px 'opensans-bold', sans-serif;
+}
+
+#game input[type=text]:focus {
+  border: 3px solid #555;
+  outline: none;
+}

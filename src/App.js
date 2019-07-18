@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
-import Game from './Components/Game';
+import NavBar from './Components/NavBar.js'
+import Main from './Main.js'
 
 class App extends React.Component {
   render() {
   return (
     <div className="App">
-      <Game />
+    	<NavBar />
+    	<Main />
     </div>
   );
   }
