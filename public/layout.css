@@ -2,6 +2,8 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
+body { background: #F4F6DCFF; }
+
 /* Navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
@@ -58,7 +60,7 @@ ul#nav li a {
 	transition: color .2s ease-in-out;
 }
 
-ul#nav li a:active { color: #F06000 }
+ul#nav li a:active { color: 'orange' }
 
 /* Game
 --------------------------------------------------------------------- */
@@ -112,4 +114,37 @@ ul#nav li a:active { color: #F06000 }
 #game input[type=text]:focus {
   border: 3px solid #555;
   outline: none;
+}
+
+/* Top Movers
+--------------------------------------------------------------------- */
+
+#movers {
+  text-align: center;
+  font-family: 'opensans-bold', sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+}
+
+#movers table {
+	width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+}
+
+#movers td, #movers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#movers tr:nth-child(even){background-color: #f2f2f2;}
+
+
+#movers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #6B0014FF;
+  color: white;
 }

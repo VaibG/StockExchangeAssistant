@@ -11,13 +11,13 @@ class Game extends React.Component {
     	this.setState(prevState => ({
     		seconds: prevState.seconds - 1
     	}));
-    	
-    	if (this.state.seconds === 0) {
+
+        if (this.state.seconds < 0) {
+            this.setState({
+                seconds: 0
+            });
+        } else if (this.state.seconds === 0) {
     		this.updateBalance()
-    		this.calculateDate()
-    		this.setState({
-    			seconds: 20
-    		});
     	}
     }
 
@@ -40,15 +40,19 @@ class Game extends React.Component {
     		if (this.readyState === 4 && this.status === 200) {
     			var res = JSON.parse(this.responseText)
     			alert(this.responseText)
-    			if (!res['chart']['error']) {
+    			if (res['chart']['result'] != false) {
     				var openPrices = res['chart']['result'][0]["indicators"]["quote"][0]["open"]
     				const startPrice = (res['chart']['result'][0]["indicators"]["quote"][0]["open"][0]);
     				const endPrice = (openPrices[openPrices.length-1]);
     				// alert("Start Price = " + startPrice + " End Price = " + endPrice)
     				var newBalance = ((endPrice - startPrice)/startPrice) * self.state.balance + self.state.balance
     				newBalance = Math.round(newBalance * 100) / 100
-    				self.setState({balance: newBalance})
-    			}
+    				self.setState({balance: newBalance, seconds: 20})
+                    self.calculateDate()
+    			} else {
+                    self.setState({seconds: 20})
+                    self.calculateDate()
+                }
     		}
     	};
     	const url = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-histories?region=US&lang=en&symbol=" + value + "&from=" + fromTime + "&to=" + toTime + "&events=div&interval=1d";

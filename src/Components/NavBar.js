@@ -8,16 +8,16 @@ class NavBar extends React.Component {
         <nav id="nav-wrap">
             <ul className="nav" id="nav">
               <li>
-                <NavLink exact={true} to="/" activeStyle={{color:'orange'}}>Game</NavLink>
+                <NavLink exact={true} to="/" activeStyle={{color: 'orange'}}>Game</NavLink>
               </li>
               <li>
-                <NavLink to="/sign-in" activeStyle={{color:'orange'}}>Watchlist</NavLink>
+                <NavLink to="/sign-in" activeStyle={{color: 'orange'}}>Watchlist</NavLink>
               </li>
               <li>
-                <NavLink to="/sing-up" activeStyle={{color:'orange'}}>Top Movers</NavLink>
+                <NavLink to="/movers" activeStyle={{color: 'orange'}}>Top Movers</NavLink>
               </li>
               <li>
-                <NavLink to="/sig-up" activeStyle={{color:'orange'}}>Recent News</NavLink>
+                <NavLink to="/sig-up" activeStyle={{color: 'orange'}}>Recent News</NavLink>
               </li>
             </ul>
         </nav>
