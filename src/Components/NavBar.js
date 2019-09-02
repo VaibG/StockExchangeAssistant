@@ -11,13 +11,13 @@ class NavBar extends React.Component {
                 <NavLink exact={true} to="/" activeStyle={{color: 'orange'}}>Game</NavLink>
               </li>
               <li>
-                <NavLink to="/sign-in" activeStyle={{color: 'orange'}}>Watchlist</NavLink>
+                <NavLink to="/watchlist" activeStyle={{color: 'orange'}}>Watchlist</NavLink>
               </li>
               <li>
                 <NavLink to="/movers" activeStyle={{color: 'orange'}}>Top Movers</NavLink>
               </li>
               <li>
-                <NavLink to="/sig-up" activeStyle={{color: 'orange'}}>Recent News</NavLink>
+                <NavLink to="/news" activeStyle={{color: 'orange'}}>Recent News</NavLink>
               </li>
             </ul>
         </nav>

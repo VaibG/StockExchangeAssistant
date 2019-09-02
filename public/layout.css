@@ -148,3 +148,109 @@ ul#nav li a:active { color: 'orange' }
   background-color: #6B0014FF;
   color: white;
 }
+
+
+/* Recent News
+--------------------------------------------------------------------- */
+
+#news .grid-container {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px 40px;
+}
+
+#news .grid-item {
+  background-color: #fff;
+  height: 60vh;
+  overflow: hidden;
+}
+
+#news img {
+  max-height: 35vh;
+  width: 100%;
+}
+
+#news {
+  text-align: center;
+}
+
+#news h1 {
+  padding-top: 10px;
+}
+
+#news a {
+  text-decoration: none;
+  color: #000;
+}
+
+#news input[type="text"] {
+  width: 20%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  margin-top: 40px;
+}
+
+
+/* Watchlist
+--------------------------------------------------------------------- */
+
+#watchlist {
+  text-align: center;
+  font-family: 'opensans-bold', sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+}
+
+#watchlist table {
+  width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+}
+
+#watchlist td, #watchlist th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#watchlist tr:nth-child(even){background-color: #f2f2f2;}
+
+
+#watchlist th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #6B0014FF;
+  color: white;
+}
+
+td.positive {
+  color:green;
+  font-weight: 700;
+}
+
+td.negative {
+  color:red;
+  font-weight: 700;
+}
+
+#watchlist input[type="text"] {
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+
+

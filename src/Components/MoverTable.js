@@ -55,9 +55,14 @@ class MoverTable extends Component {
                   var jsonData = {};
                   jsonData['symbol'] = dataSets[i]['symbol']
                   jsonData['shortName'] = dataSets[i]['shortName']
-                  jsonData['regularMarketPrice'] = dataSets[i]['regularMarketPrice']
-                  jsonData['regularMarketChange'] = dataSets[i]['regularMarketChange']
-                  jsonData['regularMarketChangePercent'] = dataSets[i]['regularMarketChangePercent']
+                  jsonData['regularMarketPrice'] = Math.round((dataSets[i]['regularMarketPrice'] + 0.00001) * 100) / 100
+                  jsonData['regularMarketChange'] = Math.round((dataSets[i]['regularMarketChange'] + 0.00001) * 100) / 100
+                  jsonData['regularMarketChangePercent'] = Math.round((dataSets[i]['regularMarketChangePercent'] + 0.00001) * 100) / 100
+                  if (jsonData['regularMarketChange'] > 0) {
+                     jsonData['status'] = 'positive'
+                  } else {
+                     jsonData['status'] = 'negative'
+                  }
                   arr.push(jsonData)
                }
                self.setState({tableData: arr});
@@ -71,14 +76,14 @@ class MoverTable extends Component {
 
    renderTableData() {
       return this.state.tableData.map((tableData, index) => {
-         const { symbol, shortName, regularMarketPrice, regularMarketChange, regularMarketChangePercent } = tableData //destructuring
+         const { symbol, shortName, regularMarketPrice, regularMarketChange, regularMarketChangePercent, status } = tableData //destructuring
          return (
             <tr key={symbol}>
                <td>{symbol}</td>
                <td>{shortName}</td>
                <td>{regularMarketPrice}</td>
-               <td>{regularMarketChange}</td>
-               <td>{regularMarketChangePercent}</td>
+               <td className={status}>{regularMarketChange}</td>
+               <td className={status}>{regularMarketChangePercent}</td>
             </tr>
          )
       })
