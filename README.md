@@ -11,7 +11,7 @@ Having just started investing in the stock market and with the goal of learning 
 The application is hosted <a href="https://stockology.netlify.app/">here</a>, but has been disconnected from the API. 
 
 ## Screenshots
-| <img src="screenshots/stockology-1.png" width="200">        | <img src="screenshots/stockology-2.png" width="200">        | <img src="screenshots/stockology-3.png" width="200">           |
+| <img src="screenshots/stockology-1.png" width="400">        | <img src="screenshots/stockology-2.png" width="400">        | <img src="screenshots/stockology-3.png" width="400">           |
 | :-------------: | :-------------: | :-------------: |
-| Watchlist | Top Movers | Recent News |
+| Recent News | Watchlist | Top Movers |
 
